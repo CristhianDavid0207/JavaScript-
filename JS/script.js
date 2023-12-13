@@ -434,7 +434,7 @@ console.log('This is an example of Types Dynamic: variableDynamic', variableDyna
 variableDynamic = "John";  // Now variableDynamic is a String
 console.log('This is an example of Types Dynamic: variableDynamic', variableDynamic, typeof variableDynamic );
 
-
+let x = 55;
 
 
 
