@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function myFunction() {
+            document.getElementById('demoTwo').innerHTML = "Paragraph changed from head"
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>What Can JavaScript Do?</h1>
+    <section id="sectionOne">
+        <h2>Section One: JS Introduction</h2>
+        <p id="demoOne" class="demo">Practice One</p>
+        <p>JavaScript can change HTML content.</p>
+        <!-- THE NEXT BUTTON WILL CHANGE THE PARAGRAPH WITH id = "demoOne" -->
+        <button type="button" onclick="document.getElementById('demoOne').innerHTML = 'Hello JavaScript!'">Changing HTML!</button> <br><br>
+        <!-- THE NEXT BUTTON WILL CHANGE THE FONT SIZE THE PARAGRAPH WITH id = "demoOne" -->
+        <button onclick="document.getElementById('demoOne').style.fontSize = '24px'">Click Me for change fun size!</button> <br> <br>
+        <!-- THE NEXT BUTTON WILL HIDE THE PARAGRAPH WITH id = "demoOne" -->
+        <button onclick="document.getElementById('demoOne').style.display = 'none'">Click Me to hide !</button> <br> <br>
+        <!-- THE NEXT BUTTON WILL DISPLAY THE PARAGRAPH WITH id = "demoOne" -->
+        <button onclick="document.getElementById('demoOne').style.display = 'block' ">Click Me display !</button> <br> <br>
+        
+        <!-- THE NEXT BUTTON WILL CHANGE THE IMAGE src = '/images/on.png'  -->
+        <button onclick="document.getElementById('myImage').src= '/images/on.png'">Turn on the light</button>        
+        <img id="myImage" src="/images/off.png" alt="N/A">  
+        <!-- THE NEXT BUTTON WILL CHANGE THE IMAGE src = '/images/off.png'        -->
+        <button onclick="document.getElementById('myImage').src= '/images/off.png'">Turn off the light</button>
+    </section>
+
+    <section id="sectionTwo">
+        <h2>Section Two: JavaScript Where to</h2>
+        <p id="demoTwo" class="demo">Practice tWO</p>
+        <script>
+            // THE NEXT CODE WILL CHANGE THE PARAGRAPH WITH id = "demoTwo"
+            document.getElementById('demoTwo').innerHTML = "Add My First script in JavaScript"
+        </script>
+
+        <h3>Demo JavaScript in Head</h3>
+        <button type="button" onclick="myFunction()">Change header text</button>
+        
+        <h3>Demo JavaScript in Body</h3>
+        <button type="button" onclick="myFunctiontwo()">Change Body text</button>
+        <script>
+            function myFunctiontwo() {
+                document.getElementById('demoTwo').innerHTML = "Changing paragraph from Body"
+            }
+            </script>
+
+        <h3>Demo JavaScript outside HTML</h3>
+        <button type="button" onclick="functionExt()">Change text Outside HTML</button>
+        <script src="script.js" defer></script>
+        
+    </section>
+
+    <section id="sectionThree">
+        <h2>Section Three: JavaScript Output</h2>
+        <p id="demoThree" class="demo">Practice Three</p>
+        <p>My First Web Page</p>
+        <p>My First Paragraph</p>
+        <p>JavaScript can "display" data in different ways:</p>
+        
+        <h3>Using innerHTML</h3>
+        <button type="button" onclick="document.getElementById('demoThree').innerHTML = 5 + 6">Using innerHTML</button>
+
+        <h3>Using document.write()</h3>
+        <p>Never call document.write after the document has finished loading. It will overwrite the whole document.</p>
+        <script>
+        document.write(7+8)
+        </script> <br><br>
+        <button type="button" onclick="document.write(9+5)">Try it!</button>
+        <p>The document.write() method should only be used for testing.</p>
+        
+        <h3>Using window.alert()</h3>
+        <button type="button" onclick="window.alert('Testing window.alert()Section Three')">Try it!</button>
+        <button type="button" onclick="alert('Testing window.alert()Section Three without using window')">Try it Option Two!</button>
+        
+        <h3>Using console.log()</h3>
+        <h4>Activate Debugging</h4>
+        <p>F12 on your keyboard will activate debugging. <br>Then select "Console" in the debugger menu. <br>Then click Run again.</p>       
+        <button type="button" onclick="console.log('Testing console.log()')";>Press F12 -> console.log!</button>
+        
+        <h3>JavaScript Print</h3>
+        <h4>The window.print() Method</h4>
+        <p>Click the button to print the current page.</p>
+        <button type="button" onclick="window.print()">Print this page</button>   
+    </section>  
+    
+    <section>
+        <h2>Section Four: JavaScript Statements</h2>
+        <p id="demoFour" class="demo">Practice Four</p>
+        <p id="demoFour1" class="demo"></p>
+
+        <h3>JavaScript Statements</h3>
+        <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+        <button type="button" onclick="
+        let x, y, z;  // Statement 1
+        x = 7;        // Statement 2
+        y = 8;        // Statement 3
+        z = x + y;    // Statement 4
+        document.getElementById('demoFour').innerHTML = 'The value of Z is ' + z + '.'">StatementOne</button>
+
+        <h3>JavaScript Statements</h3>  
+        <button type="button" onclick="document.getElementById('demoFour').innerHTML = 'Hi Emmanuel'">StatementTwo</button>
+
+        <h3>Semicolons ;</h3>
+        <p>JavaScript statements are separated by semicolons.</p>
+        <button type="button" onclick="
+        let a, b, c;  // Statement 1
+        a = 9;        // Statement 2
+        b = 7;        // Statement 3
+        c = a * b;    // Statement 4
+        document.getElementById('demoFour').innerHTML = c;
+        ">StatementThree</button>
+
+        <p>Multiple statements on one line are allowed.</p>
+        <button type="button" onclick="
+        let d, e, f;             //Statement 1
+        d = 5;  e = 5; f = d * e;  // Statement 2
+        document.getElementById('demoFour').innerHTML = f;
+        ">StatementFour</button>
+
+        <h3>JavaScript Line Length and Line Breaks</h3>
+        <p>The best place to break a code line is after an operator or a comma.</p>
+        <button type="button" onclick="document.getElementById('demoFour').innerHTML = 
+        'Hello Cristhian' ">StatementFive</button>
+
+        <h3>JavaScript Code Blocks</h3>
+        <p>JavaScript code blocks are written between { and }</p>
+        <button type="button" onclick="funtionBlocks()">StatementSix-Block</button>
+        <script>
+            function funtionBlocks() {
+                document.getElementById('demoFour').innerHTML =
+                'Hello David';
+                document.getElementById('demoFour1').innerHTML =
+                'How are you?';
+            }
+        </script>  
+    </section>
+
+    <section>
+        <h2>Section Five: JavaScript Syntax</h2>
+
+        <p id="demoFive" class="demo">Practivce five</p>
+
+        <h3>JavaScript Numbers</h3>       
+        <p>Number can be written with or without decimals.</p>
+        <button type="button" onclick="document.getElementById('demoFive').innerHTML =
+        'This is a Number <br><code> ' + 10.50; '</code>'">Syntax Literals Numbers</button>
+
+        <h3>JavaScript Strings</h3>
+        <p>Strings can be written with double or single quotes.</p>
+        <button type="button" onclick="document.getElementById('demoFive').innerHTML =
+        'This is a String whith single quotes <br> <code> ´Johnny Deep´ </code>'">Syntax Literals Strings</button>
+        
+        <h3>JavaScript Variables</h3>
+        <p>In this example, v is defined as a variable. Then, v is assigned the value of 26:</p>
+        <button type="button" onclick="
+        let v = 26;
+        document.getElementById('demoFive').innerHTML = 
+        'This is a declared variable <br><code> let v = ' + v + ';</code>' ">Variable Declaration</button>
+
+        <h3>JavaScript Operators</h3>  
+        <p>JavaScript uses arithmetic operators to compute values (just like algebra).</p>
+        <button type="button" onclick="
+        document.getElementById('demoFive').innerHTML = 
+        'This is a arithmetic operators ejm: <br><code> ( 5+ 6) * 10 = ' + (5 + 6) * 10 + '</code>'
+        ">Arithmetic Operators</button>
+
+        <h3>Assigning JavaScript Values</h3>
+        <p>In JavaScript the (=) operator is used to assign values to variables.</p>
+        <button type="button" onclick="
+        let n1, n2;
+        n1 = 5; n2 = 8;
+        document.getElementById('demoFive').innerHTML = 
+        'This is an assigning JavaScript Values ejm: <code><br>let n1, n2; <br>n1 = 5; n2 = 8; <br>n1 + n2 = ' + (n1 + n2) + '</code>'
+        ">Assigning values to variables</button>
+
+        <h3>JavaScript Expressions</h3>
+        <p>Expressions compute to values.</p>
+        <button type="button" onclick="
+        document.getElementById('demoFive').innerHTML= 
+        'This is an Expressions of <br><code> (5 * 10) <br></code>evaluates to <code><br> ' + (5 * 10) + '</code>'
+        ">Expressions</button>
+
+        <button type="button" onclick="
+        document.getElementById('demoFive').innerHTML= 
+        'This is an Expressions whith variable <code><br>let g = 8; <br> g * 10 </code><br> evaluates to <br>' + '<code>' + (8 * 10)    
+        ">Expressions with variable</button>
+
+        <h3>JavaScript Comments</h3>
+        <p>JavaScript Comments are NOT Executed</p>
+        <button type="button" onclick="
+        let h = 5 ;
+        // x = 6; I will not be executed
+        document.getElementById('demoFive').innerHTML = 'No display <br> <code> h = 6; </code> <br> I will not be executed <br><code> ' + h + '</code>'
+        ">Comment</button>
+
+        <h3>JavaScript is Case Sensitive</h3>
+        <p>Try to change lastName to lastname.</p>
+        <button type="button" onclick="
+        let lastName, lastname;
+        lastName = 'Bermudez'; lastname = 'David';
+        document.getElementById('demoFive').innerHTML= 'This prints the variable <code>lastName</code> and not the variable <code>lastname </code> identifying the letter signification <br>Let lastName, lastname; <br><code>lastName = ´Bermudez´; <br>lastname = ´David´; <br><code>' + lastName + '</code>'
+        ">is Case Sensitive</button>
+    </section>
+
+    <section>
+        <h2>Section Six: JavaScript Variables</h2>
+
+        <p id="demoSix" class="demo">Practivce Six</p>
+        
+        <h3>JavaScript Variables</h3>
+        <p>Create a variable, assign a value to it, and display it:</p>
+        <button type="button" onclick="variableExample()">Example Variable</button>
+
+        <h3>Global Variables in HTML</h3>
+        <p>In HTML, global variables defined with <b><code>var</code></b>, will become window variables.</p>
+        <button type="button" onclick="windowObjet()">Window object</button>
+        <button type="button" onclick="windowObjet2()">Window object Two</button>
+    </section>
+    
+    <section>
+        <h2>Section Seven: JavaScript Operators</h2>
+        
+        <p id="demoSeven" class="demo">Practivce Seven</p>
+        
+        <h3>JavaScript Assignment</h3>
+        <p>The Assignment Operator (=) assigns a value to a variable</p>
+        <button type="button" onclick="
+        let aa = 7;
+        let xx = 23;
+        let resultAaXx = aa - xx;
+        document.getElementById('demoSeven').innerHTML = resultAaXx;  ">Arithmetic</button>
+
+
+
+    </section>
+    
+
+</body> 
+</html>
